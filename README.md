@@ -1,32 +1,60 @@
 # Remind
 
-A command-line utility for creating quick reminders in Linux via `systemd-run` and `notify-send'.
+`remind` is a lightweight CLI utility for Linux that schedules desktop notifications using `systemd-run` and `notify-send`.
 
 ## Requirements
-- The 'g++` compiler
-- Initialization system `systemd' (installed by default in Arch Linux)
-- `libnotify' (for notification output)
 
-## Assembly and installation
+* **systemd** (default on Arch Linux)
+* **libnotify** (provides `notify-send`)
+* **g++** (only if building from source)
 
+---
+
+## Installation
+
+### Option A: Use Pre-compiled Binary
+
+1. Download the `remind` binary from the [Releases](https://github.com/AnderFan/Remind/releases) page.
+2. Make it executable and move it to your `$PATH`:
+   ```bash
+   chmod +x remind
+   sudo cp remind /usr/local/bin/
+   ```
+
+### Option B: Use Pre-compiled Binary
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/AnderFan/Remind.git](https://github.com/AnderFan/Remind.git)
+   cd Remind
+   ```
+2. Compile and install:
+   ```bash
+   g++ main.cpp -o remind -O3
+   sudo cp remind /usr/local/bin/
+   ```
+
+## Usage
 ```bash
-git clone https://github.com/AnderFan/remind.git
-cd remind
+remind <date> <time> <title> [message]
 ```
 
-## Using
-```bash
-remind 2026-07-14 12:00:00 "Lunch"
+### Examples
+* ISO Format (YYYY-MM-DD):
+    ``` bash
+    remind 2026-07-14 12:00:00 "Lunch"
+    ```
 
-# or in Russian format:
+* RU Format (DD.MM.YYYY):
+    ```bash
+    remind 14.07.2026 13:23:00 "Ping" "pong"
+    ```
 
-remind 07.14.2026 12:00:00 "Heading" "Reminder text"
+* Short ISO Format:
+    ```bash
+    remind 07-14 09:42 "Daily sync"
+    ```
 
-# This is how the abbreviated format is supported.
-
-remind 07.14 12:00 "Hi" "I`m remider!"
-
-# and
-
-remind 14-07 09:42 "Iso_shor" "I`m so short!"
-```
+* Short RU Format (DD.MM. - current year assumed):
+    ```bash
+    remind 14.07 12:00 "Ping" "Simple alert"
+    ```

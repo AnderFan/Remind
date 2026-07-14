@@ -9,8 +9,10 @@ A command-line utility for creating quick reminders in Linux via `systemd-run` a
 
 ## Assembly and installation
 
-git clone https://github.com/AnderFan/Remind.git
+```bash
+git clone https://github.com/AnderFan/remind.git
 cd remind
+```
 
 ## Using
 

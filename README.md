@@ -15,17 +15,18 @@ cd remind
 ```
 
 ## Using
-
+```bash
 remind 2026-07-14 12:00:00 "Lunch"
 
-// or in Russian format:
+# or in Russian format:
 
 remind 07.14.2026 12:00:00 "Heading" "Reminder text"
 
-// This is how the abbreviated format is supported.
+# This is how the abbreviated format is supported.
 
 remind 07.14 12:00 "Hi" "I`m remider!"
 
-// and
+# and
 
 remind 14-07 09:42 "Iso_shor" "I`m so short!"
+```

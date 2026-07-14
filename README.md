@@ -21,7 +21,7 @@
    sudo cp remind /usr/local/bin/
    ```
 
-### Option B: Use Pre-compiled Binary
+### Option B: Build from Source
 1. Clone the repository:
    ```bash
    git clone [https://github.com/AnderFan/Remind.git](https://github.com/AnderFan/Remind.git)

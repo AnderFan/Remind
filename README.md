@@ -12,7 +12,6 @@ A command-line utility for creating quick reminders in Linux via `systemd-run` a
 1. Clone the repository:
 ``bash
 git clone https://github.com/AnderFan/Remind.git
-
 cd remind
 
 ## Using
